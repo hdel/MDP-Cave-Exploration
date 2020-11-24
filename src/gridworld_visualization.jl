@@ -2,6 +2,7 @@ import POMDPModelTools.render
 using NamedColors
 using Compose, ColorSchemes, Colors
 import Measures.mm
+
 function render(mdp::MyGridWorld, step::Union{NamedTuple,Dict};
                 color = s->reward(mdp, s),
                 policy::Union{Policy,Nothing} = nothing
@@ -10,6 +11,8 @@ function render(mdp::MyGridWorld, step::Union{NamedTuple,Dict};
     nx, ny = mdp.size
     cells = []
     for x in 1:nx, y in 1:ny
+        i = abs(y - 1 - ny)
+        j = x
         cell = cell_ctx((x,y), mdp.size)
         if policy !== nothing
             a = action(policy, GWPos(x,y))
@@ -17,6 +20,9 @@ function render(mdp::MyGridWorld, step::Union{NamedTuple,Dict};
             compose!(cell, txt)
         end
         clr = tocolor(color(GWPos(x,y)))
+        if gw.valid_map[i,j] == 0
+            clr = "tan3"#colorant"tan3"
+        end
         compose!(cell, rectangle(), fill(clr), stroke("gray"))
         push!(cells, cell)
     end
