@@ -15,7 +15,7 @@ navigate, and search dynamic underground environments. These advancements would 
 benefit space exploration seeing that GPS is not a feasible navigation strategy for robotic
 exploration systems on terrestrial bodies.
 
-<img src="figures/cavecircuit.png" width="500" />
+<img src="figures/cavecircuit.PNG" width="500" />
 Figure 1: Example of a subterranean environment
 
 
@@ -49,7 +49,7 @@ environment and knows its state precisely. Based on this information, it is then
 perform value iteration until convergence in order to determine which policy to take in each
 state.
 
-<img src="figures/cavehall.png?raw=true" width="500" />
+<img src="figures/cavehall.PNG" width="250" />
 Figure 2: Map of the GridWorld Cave Environment
 
 
@@ -76,7 +76,7 @@ left corner while the gridworld is indexed from the bottom left corner. The goal
 reward of +10 is an absorbing state where no additional reward is ever received from that
 point onward.
 
-<img src="figures/cave1.png?raw=true" width="500" />
+<img src="figures/cave1.PNG" width="250" />
 Figure 3: Map of the GridWorld Cave Environment with equal traversability
 
 Additionally, a second matrix namedtraversabilitymapwas defined representing the
@@ -93,7 +93,7 @@ for our robot to try to traverse these cells so the traversability is set to -10
 the associated reward is as well. As seen from figure 4, the robot now avoids traversing
 these cells and results to taking a longer overall path in order to avoid the difficult terrain.
 
-<img src="figures/cave2.png?raw=true" width="500" />
+<img src="figures/cave2.PNG" width="250" />
 Figure 4: Map of the GridWorld Cave Environment with differing traversability
 
 ## Conclusion & Future Work
