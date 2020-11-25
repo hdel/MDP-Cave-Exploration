@@ -15,7 +15,7 @@ navigate, and search dynamic underground environments. These advancements would 
 benefit space exploration seeing that GPS is not a feasible navigation strategy for robotic
 exploration systems on terrestrial bodies.
 
-<img src="figures/cavecircuit.png?raw=true" width="500" />
+<img src="figures/cavecircuit.png" width="500" />
 Figure 1: Example of a subterranean environment
 
 
